@@ -18,11 +18,18 @@ class SuperPlomero:
     def recibir_caja_misterio(self, caja_misterio):
         self.obtener_objeto(caja_misterio.sacar_contenido())
     
-    def atacar_enemigo(self):
-        pass
+    def atacar_enemigo(self, ataque, enemigo):
+        self.sumar_puntos(ataque.aplicar(enemigo, self.estado))
+
+    def tocar_enemigo(self, enemigo):
+        if not enemigo.derrotado:
+            self.perder_vidas()
 
     def sumar_puntos(self, puntos_nuevos):
         self.puntos = self.puntos + puntos_nuevos
+        if self.puntos >= 1000:
+            self.puntos = self.puntos - 1000
+            self.ganar_vida()
 
     def perder_vidas(self):
         if self.vidas == 1:
