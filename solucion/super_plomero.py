@@ -1,5 +1,4 @@
 from solucion.estado import Pequenio
-from solucion.objetos import ObjetoEspecial
 
 class SuperPlomero:
     def __init__(self):
@@ -16,6 +15,9 @@ class SuperPlomero:
         self.estado, puntos_nuevos = objeto_especial.otorgar_beneficio(self.estado)
         self.sumar_puntos(puntos_nuevos)
 
+    def recibir_caja_misterio(self, caja_misterio):
+        self.obtener_objeto(caja_misterio.sacar_contenido())
+    
     def atacar_enemigo(self):
         pass
 
