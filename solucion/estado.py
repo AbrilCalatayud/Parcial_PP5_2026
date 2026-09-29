@@ -13,6 +13,14 @@ class Estado(ABC):
     def puede_perder_vidas(self):
         pass
 
+    @abstractmethod
+    def recibir_hongo_magico(self):
+        pass
+
+    @abstractmethod
+    def recibir_flor_de_fuego(self):
+        pass
+
 class Pequenio(Estado):
     def estado_anterior(self):
         return self
@@ -22,6 +30,12 @@ class Pequenio(Estado):
 
     def puede_perder_vidas(self):
         return True
+
+    def recibir_hongo_magico(self):
+        return Grande()
+
+    def recibir_flor_de_fuego(self):
+        return Fuego()
 
 class Grande(Estado):
     def estado_anterior(self):
@@ -33,6 +47,12 @@ class Grande(Estado):
     def puede_perder_vidas(self):
         return False
 
+    def recibir_hongo_magico(self):
+        return self
+
+    def recibir_flor_de_fuego(self):
+        return Fuego()
+
 class Fuego(Estado):
     def estado_anterior(self):
         return Grande()
@@ -42,3 +62,9 @@ class Fuego(Estado):
 
     def puede_perder_vidas(self):
         return False
+
+    def recibir_hongo_magico(self):
+        return self
+    
+    def recibir_flor_de_fuego(self):
+        return self

@@ -1,10 +1,11 @@
 from solucion.estado import Pequenio
+from solucion.objetos import ObjetoEspecial
+
 class SuperPlomero:
     def __init__(self):
         self.estado = Pequenio()
         self.puntos = 0
         self.vidas = 3 #no especificaba cuántas vidas debia tener, elegí 3
-        self.objetos = []
 
     def recibir_danio(self):
         self.estado = self.estado.estado_anterior()
@@ -12,13 +13,14 @@ class SuperPlomero:
             self.perder_vidas()
 
     def obtener_objeto(self, objeto_especial):
-        pass
+        self.estado, puntos_nuevos = objeto_especial.otorgar_beneficio(self.estado)
+        self.sumar_puntos(puntos_nuevos)
 
     def atacar_enemigo(self):
         pass
 
-    def sumar_puntos(self, cantidad):
-        pass
+    def sumar_puntos(self, puntos_nuevos):
+        self.puntos = self.puntos + puntos_nuevos
 
     def perder_vidas(self):
         if self.vidas == 1:
