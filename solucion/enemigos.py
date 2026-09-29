@@ -39,7 +39,7 @@ class Tortuga(Enemigo):
         return 0
 
     def recibir_bola_de_fuego(self):
-        self.derrortado = True
+        self.derrotado = True
         return 200
 
 class Fantasma(Enemigo):
