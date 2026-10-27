@@ -11,11 +11,11 @@ class Moneda(ObjetoEspecial):
 
 class HongoMagico(ObjetoEspecial):
     def otorgar_beneficio(self, estado):
-        return estado.recibir_hongo_magico(), 100
+        return estado.recibir_hongo_magico()
 
 class FlorDeFuego(ObjetoEspecial):
     def otorgar_beneficio(self, estado):
-        return estado.recibir_flor_de_fuego(), 0
+        return estado.recibir_flor_de_fuego()
 
 class CajaMisterio:
     def __init__(self, objeto_contenido):

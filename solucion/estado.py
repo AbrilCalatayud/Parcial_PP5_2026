@@ -35,10 +35,10 @@ class Pequenio(Estado):
         return True
 
     def recibir_hongo_magico(self):
-        return Grande()
+        return Grande(), 0
 
     def recibir_flor_de_fuego(self):
-        return Fuego()
+        return Fuego(), 0
 
 class Grande(Estado):
     def estado_anterior(self):
@@ -51,10 +51,10 @@ class Grande(Estado):
         return False
 
     def recibir_hongo_magico(self):
-        return self
+        return self, 100
 
     def recibir_flor_de_fuego(self):
-        return Fuego()
+        return Fuego(), 0
 
 class Fuego(Estado):
     def estado_anterior(self):
@@ -67,10 +67,10 @@ class Fuego(Estado):
         return False
 
     def recibir_hongo_magico(self):
-        return self
+        return self, 100
     
     def recibir_flor_de_fuego(self):
-        return self
+        return self, 0
 
     def lanzar_bola_de_fuego(self, enemigo):
         return enemigo.recibir_bola_de_fuego()
