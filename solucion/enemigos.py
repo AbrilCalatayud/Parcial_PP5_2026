@@ -23,7 +23,7 @@ class Caminante(Enemigo):
         return 100
 
     def recibir_bola_de_fuego(self):
-        self.derrortado = True
+        self.derrotado = True
         return 100
 
 class Tortuga(Enemigo):
@@ -50,5 +50,5 @@ class Fantasma(Enemigo):
         return 0
 
     def recibir_bola_de_fuego(self):
-        self.derrortado = True
+        self.derrotado = True
         return 300

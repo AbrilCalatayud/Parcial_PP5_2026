@@ -4,9 +4,9 @@
 
 * Ataque.aplicar te quedo sin self, lo cual afecta atacar_enemigo. [Listo]
 
-* Hay un error en el fantasma al recibir la bola de fuego, el atributo se llama derrortado en lugar de derrotado, con lo cual no muere nunca. [Listo]
+* Hay un error en el fantasma al recibir la bola de fuego, el atributo se llama derrortado en lugar de derrotado, con lo cual no muere nunca. [Listoo]
 
-* Evitar las validaciones innecesarias como por ejemplo la de la caja misterio. No deberia ser problema de la caja que guarda.
+* Evitar las validaciones innecesarias como por ejemplo la de la caja misterio. No deberia ser problema de la caja que guarda. [Listo]
 
 * No hay respuesta a la pregunta teorica.
 

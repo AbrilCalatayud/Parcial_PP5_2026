@@ -19,8 +19,7 @@ class FlorDeFuego(ObjetoEspecial):
 
 class CajaMisterio:
     def __init__(self, objeto_contenido):
-        if isinstance(objeto_contenido, ObjetoEspecial):
-            self.objeto_contenido = objeto_contenido
+        self.objeto_contenido = objeto_contenido
 
     def sacar_contenido(self):
         if self.objeto_contenido is None:
