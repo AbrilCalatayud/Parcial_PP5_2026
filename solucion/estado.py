@@ -21,6 +21,9 @@ class Estado(ABC):
     def recibir_flor_de_fuego(self):
         pass
 
+    def lanzar_bola_de_fuego(self, enemigo):
+        return 0
+
 class Pequenio(Estado):
     def estado_anterior(self):
         return self
@@ -68,3 +71,6 @@ class Fuego(Estado):
     
     def recibir_flor_de_fuego(self):
         return self
+
+    def lanzar_bola_de_fuego(self, enemigo):
+        return enemigo.recibir_bola_de_fuego()
