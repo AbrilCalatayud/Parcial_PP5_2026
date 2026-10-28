@@ -6,6 +6,4 @@ class Nivel:
         self.cajas_misterio = cajas_misterio
 
     def esta_completado(self):
-        if not self.enemigos:
-            return True
-        return all(enemigo.derrotado for enemigo in self.enemigos)
+        return all(not enemigo.sigue_vivo() for enemigo in self.enemigos)

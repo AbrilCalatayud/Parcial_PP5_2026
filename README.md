@@ -10,9 +10,9 @@
 
 * No hay respuesta a la pregunta teorica.
 
-* El hongo magico aporta 100 puntos estando pequeño, cuando no deberia. [Listo, en el anterior commit]
+* El hongo magico aporta 100 puntos estando pequeño, cuando no deberia. [Listo]
 
-* El test pide plomero.puntaje y el atributo se llama puntos.
+* El test pide plomero.puntaje y el atributo se llama puntos. [Listo]
 
 * tocar_enemigo lee el atributo enemigo.derrotado en vez de preguntar al enemigo si esta vivo" [Listo]
 
