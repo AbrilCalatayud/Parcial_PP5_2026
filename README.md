@@ -8,7 +8,7 @@
 
 * Evitar las validaciones innecesarias como por ejemplo la de la caja misterio. No deberia ser problema de la caja que guarda. [Listo]
 
-* No hay respuesta a la pregunta teorica.
+* No hay respuesta a la pregunta teorica. [Listo]
 
 * El hongo magico aporta 100 puntos estando pequeño, cuando no deberia. [Listo]
 
