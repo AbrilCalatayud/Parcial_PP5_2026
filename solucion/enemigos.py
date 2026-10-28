@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 class Enemigo(ABC):
     def __init__(self):
-        super().__init__()
         self.derrotado = False
 
     @abstractmethod
@@ -12,6 +11,9 @@ class Enemigo(ABC):
     @abstractmethod
     def recibir_bola_de_fuego(self):
         pass
+
+    def sigue_vivo(self):
+        return not self.derrotado
         
 
 class Caminante(Enemigo):

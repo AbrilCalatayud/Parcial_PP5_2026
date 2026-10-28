@@ -22,7 +22,7 @@ class SuperPlomero:
         self.sumar_puntos(ataque.aplicar(enemigo, self.estado))
 
     def tocar_enemigo(self, enemigo):
-        if not enemigo.derrotado:
+        if enemigo.sigue_vivo:
             self.perder_vidas()
 
     def sumar_puntos(self, puntos_nuevos):
